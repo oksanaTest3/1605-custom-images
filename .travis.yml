@@ -1,18 +1,7 @@
-jobs:
-  include:
-    - stage: create image
-      os: linux
-      dist: focal
-      vm:
-        create:
-          name: duplicate_image
-    - stage: create image
-      os: linux
-      dist: focal
-      vm:
-        create:
-          name: duplicate_image
-    - stage: use image  
-      vm:
-        use:
-          name: duplicate_image
+os: linux
+language: generic
+dist: focal
+
+vm:
+  create:
+    name: new-test-image
